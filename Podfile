@@ -10,6 +10,7 @@ pod 'Firebase'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'TextFieldEffects'
   target 'volunteirTests' do
     inherit! :search_paths
     # Pods for testing

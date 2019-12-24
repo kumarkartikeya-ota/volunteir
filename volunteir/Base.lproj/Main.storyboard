@@ -147,39 +147,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stc-pa-3O2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stc-pa-3O2">
                                 <rect key="frame" x="110" y="114" width="195" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65z-Nz-Brp">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65z-Nz-Brp">
                                 <rect key="frame" x="170" y="749" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to login"/>
                                 <connections>
                                     <segue destination="Kip-II-heI" kind="show" id="CTc-zO-jNx"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYl-Z2-5Rk">
-                                <rect key="frame" x="113" y="251" width="192" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHi-fC-5U7">
-                                <rect key="frame" x="111" y="323" width="192" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-m9-Yzo">
-                                <rect key="frame" x="113" y="389" width="192" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password(&lt;6)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQc-Fe-DP2">
-                                <rect key="frame" x="111" y="453" width="192" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYl-Z2-5Rk" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="67" y="246" width="284" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEb-WY-e8O">
                                 <rect key="frame" x="181" y="606" width="53" height="30"/>
@@ -197,31 +192,58 @@
                                     <segue destination="bLX-hf-3Sq" kind="show" id="GFs-ny-jsP"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-Vf-qFj" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="67" y="311" width="284" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y04-BB-u1L" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="67" y="384" width="284" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3O9-xP-AGM" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="65" y="446" width="284" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="nty-Lp-StJ" firstAttribute="trailing" secondItem="iYl-Z2-5Rk" secondAttribute="trailing" constant="109" id="55G-kc-AFK"/>
-                            <constraint firstItem="iYl-Z2-5Rk" firstAttribute="top" secondItem="stc-pa-3O2" secondAttribute="bottom" constant="19" id="AQC-Pp-hru"/>
-                            <constraint firstItem="jHi-fC-5U7" firstAttribute="centerX" secondItem="stc-pa-3O2" secondAttribute="centerX" id="Dvx-9F-BZ3"/>
-                            <constraint firstItem="iYl-Z2-5Rk" firstAttribute="leading" secondItem="nty-Lp-StJ" secondAttribute="leading" constant="113" id="E2U-G9-9RO"/>
-                            <constraint firstItem="iYl-Z2-5Rk" firstAttribute="leading" secondItem="gcx-m9-Yzo" secondAttribute="leading" id="UB6-i3-ieL"/>
-                            <constraint firstItem="jHi-fC-5U7" firstAttribute="leading" secondItem="nty-Lp-StJ" secondAttribute="leading" constant="111" id="WEk-Jw-2Yx"/>
-                            <constraint firstItem="jHi-fC-5U7" firstAttribute="centerX" secondItem="65z-Nz-Brp" secondAttribute="centerX" id="Xex-cO-hcv"/>
-                            <constraint firstItem="gcx-m9-Yzo" firstAttribute="top" secondItem="jHi-fC-5U7" secondAttribute="bottom" constant="42" id="auF-LU-dSc"/>
-                            <constraint firstItem="iYl-Z2-5Rk" firstAttribute="top" secondItem="VQx-wq-3xi" secondAttribute="top" constant="251" id="dtQ-mP-qY3"/>
-                            <constraint firstItem="iYl-Z2-5Rk" firstAttribute="trailing" secondItem="stc-pa-3O2" secondAttribute="trailing" id="hkr-8K-lcy"/>
-                            <constraint firstItem="iYl-Z2-5Rk" firstAttribute="trailing" secondItem="gcx-m9-Yzo" secondAttribute="trailing" id="ksd-Sq-PIU"/>
-                            <constraint firstItem="jHi-fC-5U7" firstAttribute="top" secondItem="iYl-Z2-5Rk" secondAttribute="bottom" constant="37" id="oVC-KZ-OGx"/>
-                            <constraint firstItem="jHi-fC-5U7" firstAttribute="centerX" secondItem="VQx-wq-3xi" secondAttribute="centerX" id="ztm-DF-6jG"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nty-Lp-StJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="yjY-a0-WCh"/>
                     <connections>
-                        <outlet property="email" destination="gcx-m9-Yzo" id="LE6-xC-UYG"/>
+                        <outlet property="email" destination="y04-BB-u1L" id="Kbr-ah-NQq"/>
                         <outlet property="firstName" destination="iYl-Z2-5Rk" id="Vwv-s1-bdr"/>
-                        <outlet property="lastName" destination="jHi-fC-5U7" id="SSF-v4-cd9"/>
-                        <outlet property="password" destination="iQc-Fe-DP2" id="3Am-j9-ypg"/>
+                        <outlet property="lastName" destination="EKL-Vf-qFj" id="60j-AB-IDR"/>
+                        <outlet property="password" destination="3O9-xP-AGM" id="KcO-XW-BG0"/>
                         <segue destination="e5g-cU-jaF" kind="show" identifier="registerSuccess" id="dn9-Dz-37b"/>
                     </connections>
                 </viewController>
@@ -321,7 +343,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gIu-YU-zXG"/>
+        <segue reference="CTc-zO-jNx"/>
         <segue reference="dn9-Dz-37b"/>
         <segue reference="JMK-JS-vbi"/>
     </inferredMetricsTieBreakers>

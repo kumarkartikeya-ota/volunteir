@@ -70,12 +70,14 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - TextFieldEffects (1.5.1)
 
 DEPENDENCIES:
   - Firebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -91,6 +93,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Firebase: fa80b9d987ca014a1ba9357496ef2a0178b28b12
@@ -105,7 +108,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
 
-PODFILE CHECKSUM: a73818ae1ccd67bec438e05027d7d1ef12872de7
+PODFILE CHECKSUM: 209bb28e0826e0c5b8bcfb150b6a201f9c9dd2d9
 
 COCOAPODS: 1.5.3
