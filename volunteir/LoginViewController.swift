@@ -12,13 +12,19 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var invalidError: UILabel!
+    
+    lazy var username = "\(firstName.text!)\(lastName.text!)"
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        invalidError.isHidden = true
     }
     
     @IBAction func loginPressed(_ sender: Any) {
@@ -29,13 +35,15 @@ class LoginViewController: UIViewController {
                 if(error != nil){
                     print(error!)
                     success = false
+                    self.invalidError.isHidden = false
                 }
                 else{
                     print("success")
-                    let ref = Database.database().reference().child("users/\(self.username.text!)")
+                    let ref = Database.database().reference().child("users/\(self.username)")
                      ref.observeSingleEvent(of: .value, with: { (snapshot) in
                      // Now you can access the type value
                      let value = snapshot.value as? NSDictionary
+                        print(value)
                      type = (value!["type"])! as! String
                     if(type == "user"){
                         self.performSegue(withIdentifier: "goToUser", sender: self)
